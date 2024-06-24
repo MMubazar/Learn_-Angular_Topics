@@ -1,0 +1,49 @@
+<!---------------------------------------------- ONE WAY BINDING --------------------------------- -->
+<!-- ----------------------------Interpolation------------------- -->
+<p>Welcome, {{ username }}!</p>
+<br />
+<p>{{ message }}</p>
+<br /><br />
+
+<!-- --------------------------------Property Binding-------------------------- -->
+<img [src]="ImageUrl" alt="image" />
+<br />
+<button [disabled]="isDisabled">Click Me</button>
+<br /><br />
+
+<!-- -------------------------------------Event Binding------------------------------- -->
+<button (click)="handleClick()">Click Me</button>
+<br />
+<input (input)="handleInput($event)" />
+<br /><br />
+
+<!-- ---------------------------------------Two-Way Binding----------------------------- -->
+<input [(ngModel)]="name" />
+<br />
+<p>Hi, {{ name }}!</p>
+<br />
+<h1>Email</h1>
+<br />
+<br />
+<input [(ngModel)]="email" placeholder="Enter your email" />
+<br />
+<p>Your email: {{ email }}</p>
+<br /><br />
+
+<!-- --------------------------------------------Attribute Binding--------------------- -->
+<div [attr.role]="role">User Role</div>
+<br /><br />
+<button [attr.aria-label]="ariaLabel">lable</button>
+<br /><br />
+
+<!-- --------------------------------------------Class Binding-------------------- -->
+<br /><br />
+<div [class.active]="isActive">Active Div</div>
+<br /><br />
+<div [class.error]="isError">Alert Message</div>
+
+<!-- ------------------------------------------------Style Binding----------------------------------- -->
+<br /><br />
+<div [style.background-color]="bgColor">Styled Div</div>
+<br />
+<p [style.font-size]="fontSize">Styled Text</p>
