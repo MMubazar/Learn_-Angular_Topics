@@ -1,0 +1,64 @@
+<h3>{{ title | uppercase }}</h3>
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+  <div>
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Enter your name"
+      formControlName="name"
+    />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input
+      type="text"
+      name="email"
+      id="email"
+      placeholder="Enter your email"
+      formControlName="email"
+    />
+  </div>
+  <div formGroupName="address">
+    <label for="street">Street:</label>
+    <input
+      type="text"
+      name="street"
+      id="street"
+      placeholder="Enter your street"
+      formControlName="street"
+    />
+    <br />
+    <label for="city">City:</label>
+    <input
+      type="text"
+      name="city"
+      id="city"
+      placeholder="Enter your city"
+      formControlName="city"
+    />
+  </div>
+
+  <!-- Dynamic Forms -->
+  <div formArrayName="phoneNumbers">
+    <div *ngFor="let phoneCtrl of phoneNumbers.controls; let i = index">
+      <label>Phone Numbers {{ i + 1 }}:</label>
+
+      <input type="text" [formControlName]="i" />
+
+      <br />
+
+      <button type="button" (click)="removePhoneNumber(i)">
+        Remove Phone Number
+      </button>
+    </div>
+    <div>
+      <button type="button" (click)="addPhoneNumber()">Add Phone Number</button>
+    </div>
+  </div>
+  <div>
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </div>
+</form>
