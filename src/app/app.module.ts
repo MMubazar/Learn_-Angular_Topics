@@ -7,13 +7,15 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateDFormComponent } from './template-d-form/template-d-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { BuildInPipesComponent } from './Pipes/build-in-pipes/build-in-pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingComponent,
     TemplateDFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    BuildInPipesComponent
   ],
   imports: [
     BrowserModule,
