@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,7 +10,10 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateDFormComponent } from './template-d-form/template-d-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { BuildInPipesComponent } from './Pipes/build-in-pipes/build-in-pipes.component';
+import { BuildInPipesComponent } from './pipesComponents/build-in-pipes/build-in-pipes.component';
+import { CustomPipesComponent } from './pipesComponents/custom-pipes/custom-pipes.component';
+import { TitleCasePipePipe } from '../app/pipes/title-case-pipe.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,17 +21,18 @@ import { BuildInPipesComponent } from './Pipes/build-in-pipes/build-in-pipes.com
     BindingComponent,
     TemplateDFormComponent,
     ReactiveFormComponent,
-    BuildInPipesComponent
+    BuildInPipesComponent,
+    CustomPipesComponent,
+    TitleCasePipePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
