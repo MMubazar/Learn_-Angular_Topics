@@ -27,13 +27,6 @@ export class TemplateDFormComponent {
     return emailRegex.test(this.userForm.email);
   }
 
-  // validatedName():boolean{
-  //   // const nameRegex = /^[a-zA-Z'&\-_.,!@#$%^*()+={}[\]:;"'<>/\\]+(?:\s+[a-zA-Z'&\-_.,!@#$%^*()+={}[\]:;"'<>/\\]+)*$/;
-  //   const nameRegex = /^[a-zA-Z'-]+(?:\s+[a-zA-Z'-]+)*$/
-  //   ;
-  //   return nameRegex.test(this.userForm.name)
-  // }
-
   validatedName(): boolean {
     // const nameRegex = /^[a-zA-Z'&\-_.,!@#$%^*()+={}[\]:;"'<>/\\]+(?:\s+[a-zA-Z'&\-_.,!@#$%^*()+={}[\]:;"'<>/\\]+)*$/;
     const nameRegex = /^[a-zA-Z'-]+(?:\s+[a-zA-Z'-]+)*$/;
