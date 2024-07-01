@@ -1,17 +1,17 @@
-<h1>{{title | uppercase}}</h1>
-
+<h1>{{ title | uppercase }}</h1>
+<!-- 
 <div>
     <h2>Add User Information</h2>
     <form #userInfo = "ngForm" (ngSubmit)="submitForm(userInfo)">
         <div>
             <label for="name">Name: </label>
-            <input type="text" name="name" placeholder="Enter your name" id="name" #nameF="ngModel" required minlength="3" maxlength="50" [(ngModel)]="userForm.name">
-            <!-- <div *ngIf="nameF.invalid && (nameF.dirty || nameF.touched)" class="alert alert-danger">
+            <input type="text" name="name" placeholder="Enter your name" id="name" #nameF="ngModel" required minlength="3" maxlength="50" [(ngModel)]="userForm.name"> -->
+<!-- <div *ngIf="nameF.invalid && (nameF.dirty || nameF.touched)" class="alert alert-danger">
                 <div *ngIf="nameF.errors">Name is required.</div>
                 <div *ngIf="nameF.errors">Name must be at least 3 characters long.</div>
                 <div *ngIf="nameF.errors">Name cannot be more than 50 characters long.</div>
               </div> -->
-        </div>
+<!-- </div>
         <div>
             <label for="email">Email: </label>
             <input type="email" name="email" placeholder="Enter your email" id="email" required [(ngModel)]="userForm.email">
@@ -24,4 +24,59 @@
             <button type="submit" (click)="reset()" [disabled]="userInfo.invalid || !validatedEmail() || !validatedName()">Submit</button>
         </div>
     </form>
+</div> -->
+<div>
+  <h2>Add User Information</h2>
+  <form #userInfo="ngForm" (ngSubmit)="submitForm(userInfo)">
+    <div>
+      <label for="name">Name: </label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter your name"
+        id="name"
+        #nameF="ngModel"
+        required
+        minlength="3"
+        maxlength="50"
+        [(ngModel)]="userForm.name"
+      />
+      <!-- <div *ngIf="nameF.invalid && (nameF.dirty || nameF.touched)" class="alert alert-danger">
+                <div *ngIf="nameF.errors">Name is required.</div>
+                <div *ngIf="nameF.errors">Name must be at least 3 characters long.</div>
+                <div *ngIf="nameF.errors">Name cannot be more than 50 characters long.</div>
+              </div> -->
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        id="email"
+        required
+        [(ngModel)]="userForm.email"
+      />
+    </div>
+    <div>
+      <label for="phoneNo">Phone No: </label>
+      <input
+        type="text"
+        name="phoneNo"
+        placeholder="Enter your phoneNo"
+        id="phoneNo"
+        required
+        [(ngModel)]="userForm.phoneNo"
+      />
+    </div>
+    <div>
+      <button
+        type="submit"
+        (click)="reset()"
+        [disabled]="userInfo.invalid || !validatedEmail() || !validatedName()"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
 </div>
