@@ -5,6 +5,8 @@ import { BuildInPipesComponent } from './pipesComponents/build-in-pipes/build-in
 import { CustomPipesComponent } from './pipesComponents/custom-pipes/custom-pipes.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDFormComponent } from './template-d-form/template-d-form.component';
+import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
+import { ChildComponent } from './Parent_Child_Relation/child/child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/reactive-forms', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'custom-pipes', component: CustomPipesComponent },
   { path: 'reactive-forms', component: ReactiveFormComponent },
   { path: 'template-forms', component: TemplateDFormComponent },
+  { path: 'parent', component: ParentComponent },
+  { path: 'child', component: ChildComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,39 @@
+<h1>Parent Component</h1>
+<br /><br />
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+      <small *ngIf="name?.errors?.['required']">Name is required.</small>
+      <small *ngIf="name?.errors?.['minlength']"
+        >Name must be at least 2 characters long.</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+      <small *ngIf="email?.errors?.['required']">Email is required.</small>
+      <small *ngIf="email?.errors?.['email']"
+        >Email must be a valid email address.</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age" />
+    <div *ngIf="age?.invalid && (age?.dirty || age?.touched)">
+      <small *ngIf="age?.errors?.['required']">Age is required.</small>
+      <small *ngIf="age?.errors?.['min']">Age must be at least 1.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+
+<app-child [data]="form.value" *ngIf="form.valid"></app-child>

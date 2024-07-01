@@ -14,6 +14,8 @@ import { BuildInPipesComponent } from './pipesComponents/build-in-pipes/build-in
 import { CustomPipesComponent } from './pipesComponents/custom-pipes/custom-pipes.component';
 import { TitleCasePipePipe } from '../app/pipes/title-case-pipe.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
+import { ChildComponent } from './Parent_Child_Relation/child/child.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     BuildInPipesComponent,
     CustomPipesComponent,
     TitleCasePipePipe,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
