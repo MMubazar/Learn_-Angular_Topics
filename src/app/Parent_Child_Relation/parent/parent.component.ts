@@ -36,9 +36,9 @@ export class ParentComponent {
   submit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      this.router.navigate(['/child'], {
-        state: { formValues: this.form.value },
-      });
+      // this.router.navigate(['/child'], {
+      //   state: { formValues: this.form.value },
+      // });
     }
   }
 }
