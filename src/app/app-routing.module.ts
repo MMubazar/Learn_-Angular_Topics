@@ -7,9 +7,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDFormComponent } from './template-d-form/template-d-form.component';
 import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
 import { ChildComponent } from './Parent_Child_Relation/child/child.component';
+import { LifeCycleComponentsComponent } from './life-cycle-components/life-cycle-components.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/reactive-forms', pathMatch: 'full' },
+  { path: '', redirectTo: '/lifeCycle', pathMatch: 'full' },
   { path: 'binding', component: BindingComponent },
   { path: 'built-in-pipes', component: BuildInPipesComponent },
   { path: 'custom-pipes', component: CustomPipesComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'template-forms', component: TemplateDFormComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'child', component: ChildComponent },
+  { path: 'lifeCycle', component: LifeCycleComponentsComponent },
 ];
 
 @NgModule({

@@ -16,6 +16,7 @@ import { TitleCasePipePipe } from '../app/pipes/title-case-pipe.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
 import { ChildComponent } from './Parent_Child_Relation/child/child.component';
+import { LifeCycleComponentsComponent } from './life-cycle-components/life-cycle-components.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ChildComponent } from './Parent_Child_Relation/child/child.component';
     TitleCasePipePipe,
     ParentComponent,
     ChildComponent,
+    LifeCycleComponentsComponent,
   ],
   imports: [
     BrowserModule,
