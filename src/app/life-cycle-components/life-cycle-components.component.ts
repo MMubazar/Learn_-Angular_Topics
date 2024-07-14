@@ -43,6 +43,7 @@ export class LifeCycleComponentsComponent {
     console.log(this.Changes);
 
     console.log('ngAfterViewInit');
+    console.log('con');
   }
 
   ngAfterViewChecked() {
