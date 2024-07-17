@@ -1,7 +1,32 @@
-<h1>life-cycle!</h1>
-<p>{{ Changes }}</p>
+<!-- <p>{{ Changes }}</p> -->
+<h1>life-cycle Hook Practice</h1>
+<br />
+<br />
+<h1>Example#02</h1>
 <div>
   <h2>Counter: {{ counterValue }}</h2>
   <button (click)="increment()">Increment</button>
   <button (click)="decrement()">Decrement</button>
 </div>
+<br />
+<br />
+
+<h1>Example#03</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngFor="let control of config">
+    <label [for]="control.name">{{ control.label }}</label>
+    <input
+      [id]="control.name"
+      [formControlName]="control.name"
+      [type]="control.type"
+    />
+    <div
+      *ngIf="form.get(control.name)?.invalid && form.get(control.name)?.touched"
+    >
+      <small *ngIf="form.get(control.name)?.hasError('required')"
+        >{{ control.label }} is required.</small
+      >
+    </div>
+  </div>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
