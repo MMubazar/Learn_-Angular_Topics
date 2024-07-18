@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
 import { ChildComponent } from './Parent_Child_Relation/child/child.component';
 import { LifeCycleComponentsComponent } from './life-cycle-components/life-cycle-components.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LifeCycleComponentsComponent } from './life-cycle-components/life-cycle
     ParentComponent,
     ChildComponent,
     LifeCycleComponentsComponent,
+    InvoiceComponent,
   ],
   imports: [
     BrowserModule,

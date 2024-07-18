@@ -8,6 +8,7 @@ import { TemplateDFormComponent } from './template-d-form/template-d-form.compon
 import { ParentComponent } from './Parent_Child_Relation/parent/parent.component';
 import { ChildComponent } from './Parent_Child_Relation/child/child.component';
 import { LifeCycleComponentsComponent } from './life-cycle-components/life-cycle-components.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/lifeCycle', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'parent', component: ParentComponent },
   { path: 'child', component: ChildComponent },
   { path: 'lifeCycle', component: LifeCycleComponentsComponent },
+  { path: 'invoice', component: InvoiceComponent },
 ];
 
 @NgModule({
